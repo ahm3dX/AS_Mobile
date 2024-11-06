@@ -1,0 +1,40 @@
+<!-- res/layout/fragment_create_farmer.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Farmer"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editText_farmer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Farmer Name" />
+
+    <EditText
+        android:id="@+id/editText_farmer_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Farmer Email"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/editText_farmer_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Farmer Age"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/button_create_farmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Farmer" />
+</LinearLayout>
