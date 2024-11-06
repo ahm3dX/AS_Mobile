@@ -1,22 +1,11 @@
 package com.example.ynsvalidation;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-
-
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.ynsvalidation.fragments.CreateFarmerFragment;
 import com.example.ynsvalidation.fragments.FarmerListFragment;
-
+import com.example.ynsvalidation.fragments.CreateFarmFragment;
+import com.example.ynsvalidation.fragments.FarmListFragment;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -37,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 .addToBackStack(null)
                 .commit();
     }
+
     public void navigateToFarmersList() {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, new FarmerListFragment())
@@ -44,17 +34,17 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 
-    /*public void navigateToCreateFarm() {
+    public void navigateToCreateFarm() {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, new CreateFarmFragment())
                 .addToBackStack(null)
                 .commit();
     }
 
-    public void navigateToCreateTask() {
+    public void navigateToFarmsList() {
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, new CreateTaskFragment())
+                .replace(R.id.fragment_container, new FarmListFragment())
                 .addToBackStack(null)
                 .commit();
-    }*/
+    }
 }

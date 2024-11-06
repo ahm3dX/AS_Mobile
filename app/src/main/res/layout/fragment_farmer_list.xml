@@ -1,11 +1,8 @@
-<!-- res/layout/activity_farmers_list.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<!-- fragment_farmer_list.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#FAFAFA">
-
+    android:layout_height="match_parent">
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -15,12 +12,23 @@
         android:textStyle="bold"
         android:textColor="#4CAF50"
         android:paddingBottom="8dp" />
-
+    <!-- RecyclerView for displaying the list of farmers -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:clipToPadding="false"
-        android:paddingBottom="8dp" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_add_farmer"
+
+        android:paddingStart="10dp"
+        android:paddingTop="39dp"/>
+
+    <!-- Button to Add Farmer -->
+    <Button
+        android:id="@+id/button_add_farmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Farmer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp" />
+</RelativeLayout>
